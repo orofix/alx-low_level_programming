@@ -1,14 +1,43 @@
-#include <unistd.h>
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * main - Entry point
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: Always 0 (Success)
  */
-int _putchar(char c)
+int main(void)
 {
-	return (write(1, &c, 1));
+	char c = 'H';
+
+	do {
+	_putchar(c);
+	if (c == 'H')
+		c = 'o';
+	else if (c == 'o')
+		c = 'l';
+	else if (c == 'l')
+		c = 'b';
+	else if (c == 'b')
+		c = 'e';
+	else if (c == 'e')
+		c = 'r';
+	else if (c == 'r')
+		c = 't';
+	else if (c == 't')
+		c = 'z';
+	} while (c != 'z');
+
+	c = 'o';
+
+	do {
+		_putchar(c);
+	if (c == 'o')
+		c = 'n';
+	else if (c == 'n')
+		c = '\n';
+	else if (c == '\n')
+		c = 'z';
+	} while (c != 'z');
+
+return (0);
 }
