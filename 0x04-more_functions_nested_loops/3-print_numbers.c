@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
  * print_numbers - print a sequence from 0 to 9
@@ -15,4 +15,4 @@ void print_numbers(void)
 		_putchar(a + '0');
 	}
 	_putchar('\n');
-}}
+}
