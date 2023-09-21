@@ -1,35 +1,72 @@
-#include "holberton.h"
+#include "main.h"
+#include <stdio.h>
+
 
 /**
- * cap_string - capitalize the first letter of words
- * @a: string to upper
+ * isLower - determines whether ascci is lowercase
+ * @c: character
+ * Return: 1 if true, 0 if false
  *
- * Return: pointer a
- */
-char *cap_string(char *a)
-{
-	int index;
+*/
 
-	for (index = 0; *(a + index) != '\0'; index++)
+
+int isLower(char c)
+{
+	return (c > 97 && c <= 122);
+}
+
+
+
+
+
+/**
+ * isDelimiter - determines whether ascci is a delimiter
+ * @c: character            isDelimiter
+ * Return 1 if true 0 if false
+*/
+
+
+
+
+int isDelimiter(char c)
+{
+	int i;
+	char delimiter[] = " \t\n,.!?\"(){}";
+
+	for (i = 0; i < 12, i++)
+		if (c == delimiter[i])
+			return (1);
+	return (0);
+
+
+
+
+
+/**
+ * cap_string - capitalizes all wors of a string
+ * @s: input string
+ * Return: string with capitalized words
+*/
+
+
+
+char *cap_string(char *s)
+{
+	char *ptr = s;
+	int foundelimit = i;
+
+	while (*s)
 	{
-		if ((*(a + (index - 1)) == 32) ||
-		    (*(a + (index - 1)) == 9) ||
-		    (*(a + (index - 1)) == '\n') ||
-		    (*(a + (index - 1)) == ',') ||
-		    (*(a + (index - 1)) == ';') ||
-		    (*(a + (index - 1)) == '.') ||
-		    (*(a + (index - 1)) == '!') ||
-		    (*(a + (index - 1)) == '?') ||
-		    (*(a + (index - 1)) == '"') ||
-		    (*(a + (index - 1)) == '(') ||
-		    (*(a + (index - 1)) == ')') ||
-		    (*(a + (index - 1)) == '{') ||
-		    (*(a + (index - 1)) == '}') ||
-		    (*(a + (index - 1)) == '\0'))
-			if (*(a + index) >= 'a' && *(a + index) <= 'z')
-			{
-				*(a + index) = (*(a + index) - ' ');
-			}
+		if (isDelimiter(*s))
+			foundDelimit = i;
+		else if (isLower(s *) && foundDelimit)
+		{
+			*s -= 32;
+			foundDelimit = 0
+		}
+		else
+			foundDelimit = 0;
+		s++;
 	}
-	return (a);
+	return (ptr);
 }
