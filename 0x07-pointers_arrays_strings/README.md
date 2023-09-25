@@ -1,0 +1,1 @@
+arrarys and strings
