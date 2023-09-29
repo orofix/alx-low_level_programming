@@ -1,19 +1,16 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - measure a string
+ * _print_rev_recursion - prints inverse strings
  * @s: the string
  * Return: no returns
  */
 
-int _strlen_recursion(char *s)
+void _print_rev_recursion(char *s)
 {
-	int counter;
-
-	counter = 0;
 	if (*s != '\0')
 	{
-		counter = (1 + _strlen_recursion(s + 1));
+		_print_rev_recursion(s + 1);
+		_putchar(*(s));
 	}
-	return (counter);
 }

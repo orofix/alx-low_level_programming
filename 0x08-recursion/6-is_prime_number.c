@@ -18,7 +18,7 @@ int divisor_it(int n, int x)
 		return (divisor_it(n, (x - 1)));
 }
 
-#include "holberton.h"
+#include "main.h"
 
 /**
  * is_prime_number - take the number and send it to iterator
